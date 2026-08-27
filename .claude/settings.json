@@ -7,7 +7,11 @@
       "Read(//Users/omkarmhatre/.pub-cache/**)",
       "Read(//Users/omkarmhatre/.pub-cache/hosted/pub.dev/font_awesome_flutter-11.0.0/lib/src/**)",
       "Bash(flutter build *)",
-      "Bash(echo \"EXIT: $?\")"
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(find \"/Users/omkarmhatre/My Projects/porfolio/omkar_mhatre\" -type f \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.webp\" \\\\\\) -not -path \"*/web/icons/*\" -not -name \"favicon.png\" 2>/dev/null; echo \"---recent anywhere in home \\(last 60 min\\)---\"; find /Users/omkarmhatre -maxdepth 6 -type f -mmin -60 \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.webp\" \\\\\\) 2>/dev/null | grep -viE \"Library|node_modules|\\\\.git\" | head -30)",
+      "Read(//Users/omkarmhatre/**)",
+      "Bash(osascript -e 'set theFile to \\(open for access POSIX file \"/private/tmp/claude-501/-Users-omkarmhatre-My-Projects-porfolio-omkar-mhatre/4411fa1d-ee4d-4e93-8242-7063669b746d/scratchpad/clipboard_image.png\" with write permission\\) *)",
+      "Read(//Users/omkarmhatre/Downloads/**)"
     ],
     "additionalDirectories": [
       "/Users/omkarmhatre/Downloads"

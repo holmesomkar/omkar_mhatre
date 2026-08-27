@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/content/portfolio_data.json
     - assets/resume/Omkar_Mhatre_Resume.pdf
+    - assets/images/profile.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

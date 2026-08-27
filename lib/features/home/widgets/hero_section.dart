@@ -26,8 +26,9 @@ class HeroSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isMobile = Breakpoints.isMobile(context);
+    final isDesktop = Breakpoints.isDesktop(context);
 
-    final avatar = _Avatar(initials: profile.initials);
+    final avatar = _Avatar(initials: profile.initials, photoAssetPath: profile.photoAssetPath);
 
     final textColumn = Column(
       crossAxisAlignment: isMobile ? CrossAxisAlignment.center : CrossAxisAlignment.start,
@@ -45,7 +46,11 @@ class HeroSection extends StatelessWidget {
         Text(
           "Hi, I'm ${profile.name}",
           textAlign: isMobile ? TextAlign.center : TextAlign.start,
-          style: theme.textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w800),
+          style: theme.textTheme.displaySmall?.copyWith(
+            fontWeight: FontWeight.w800,
+            fontSize: isDesktop ? 64 : null,
+            height: 1.1,
+          ),
         ),
         const SizedBox(height: 16),
         Text(
@@ -106,9 +111,10 @@ class HeroSection extends StatelessWidget {
 }
 
 class _Avatar extends StatelessWidget {
-  const _Avatar({required this.initials});
+  const _Avatar({required this.initials, required this.photoAssetPath});
 
   final String initials;
+  final String? photoAssetPath;
 
   @override
   Widget build(BuildContext context) {
@@ -132,10 +138,33 @@ class _Avatar extends StatelessWidget {
         ],
       ),
       alignment: Alignment.center,
-      child: Text(
-        initials,
-        style: const TextStyle(fontSize: 80, fontWeight: FontWeight.w800, color: Colors.white),
-      ),
+      // A little breathing room between the photo and the gradient ring,
+      // so the fade below has somewhere to dissolve into.
+      padding: photoAssetPath == null ? EdgeInsets.zero : const EdgeInsets.all(5),
+      child: photoAssetPath == null
+          ? Text(
+              initials,
+              style: const TextStyle(fontSize: 80, fontWeight: FontWeight.w800, color: Colors.white),
+            )
+          : ClipOval(
+              child: ShaderMask(
+                blendMode: BlendMode.dstIn,
+                shaderCallback: (bounds) => const RadialGradient(
+                  colors: [Colors.white, Colors.white, Colors.transparent],
+                  stops: [0.0, 0.85, 1.0],
+                ).createShader(bounds),
+                child: Image.asset(
+                  photoAssetPath!,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) => Center(
+                    child: Text(
+                      initials,
+                      style: const TextStyle(fontSize: 80, fontWeight: FontWeight.w800, color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            ),
     ).animate().scale(duration: 500.ms, curve: Curves.easeOutBack);
   }
 }

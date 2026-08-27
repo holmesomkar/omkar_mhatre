@@ -37,9 +37,13 @@ class NavBar extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Text(
-                name,
-                style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
+              Flexible(
+                child: Text(
+                  name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
+                ),
               ),
               const Spacer(),
               if (isDesktop)

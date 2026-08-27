@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/constants/breakpoints.dart';
+import '../../../core/widgets/hover_lift.dart';
 import '../../../core/widgets/section_title.dart';
 import '../../../core/widgets/section_wrapper.dart';
 import '../../../data/models/expertise_highlight.dart';
@@ -60,7 +61,7 @@ class ExpertiseSection extends StatelessWidget {
                   for (var i = 0; i < highlights.length; i++)
                     SizedBox(
                       width: cardWidth,
-                      child: _ExpertiseCard(item: highlights[i])
+                      child: HoverLift(child: _ExpertiseCard(item: highlights[i]))
                           .animate(delay: (i * 70).ms)
                           .fadeIn(duration: 400.ms)
                           .scale(begin: const Offset(0.96, 0.96), end: const Offset(1, 1)),

@@ -12,7 +12,8 @@
     "yearsFlutterExperience": "5+",
     "yearsAndroidExperience": "7+",
     "resumeAssetPath": "assets/resume/Omkar_Mhatre_Resume.pdf",
-    "resumeFileName": "Omkar_Mhatre_Resume.pdf"
+    "resumeFileName": "Omkar_Mhatre_Resume.pdf",
+    "photoAssetPath": "assets/images/profile.png"
   },
   "skillGroups": [
     {

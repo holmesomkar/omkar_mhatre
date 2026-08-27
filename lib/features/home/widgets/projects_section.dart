@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/constants/breakpoints.dart';
+import '../../../core/widgets/hover_lift.dart';
 import '../../../core/widgets/section_title.dart';
 import '../../../core/widgets/section_wrapper.dart';
 import '../../../core/widgets/skill_chip.dart';
@@ -38,7 +39,7 @@ class ProjectsSection extends StatelessWidget {
                   for (var i = 0; i < projects.length; i++)
                     SizedBox(
                       width: cardWidth,
-                      child: _ProjectCard(project: projects[i])
+                      child: HoverLift(child: _ProjectCard(project: projects[i]))
                           .animate(delay: (i * 90).ms)
                           .fadeIn(duration: 400.ms)
                           .slideY(begin: 0.08, end: 0),

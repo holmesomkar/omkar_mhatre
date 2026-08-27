@@ -13,6 +13,7 @@ class Profile {
     required this.yearsAndroidExperience,
     required this.resumeAssetPath,
     required this.resumeFileName,
+    this.photoAssetPath,
   });
 
   factory Profile.fromJson(Map<String, dynamic> json) {
@@ -30,6 +31,7 @@ class Profile {
       yearsAndroidExperience: json['yearsAndroidExperience'] as String,
       resumeAssetPath: json['resumeAssetPath'] as String,
       resumeFileName: json['resumeFileName'] as String,
+      photoAssetPath: json['photoAssetPath'] as String?,
     );
   }
 
@@ -46,6 +48,7 @@ class Profile {
   final String yearsAndroidExperience;
   final String resumeAssetPath;
   final String resumeFileName;
+  final String? photoAssetPath;
 
   String get initials {
     final parts = name.trim().split(RegExp(r'\s+'));

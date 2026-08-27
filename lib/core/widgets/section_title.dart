@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
+import '../constants/breakpoints.dart';
+
 class SectionTitle extends StatelessWidget {
   const SectionTitle({super.key, required this.eyebrow, required this.title});
 
@@ -10,6 +12,7 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final isDesktop = Breakpoints.isDesktop(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -24,7 +27,10 @@ class SectionTitle extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           title,
-          style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.w700),
+          style: theme.textTheme.headlineMedium?.copyWith(
+            fontWeight: FontWeight.w700,
+            fontSize: isDesktop ? 40 : null,
+          ),
         ),
         const SizedBox(height: 32),
       ],

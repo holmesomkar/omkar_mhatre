@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/constants/breakpoints.dart';
 import '../../../core/constants/section.dart';
 import '../../../data/models/portfolio_data.dart';
 import '../../../data/portfolio_repository.dart';
@@ -17,6 +18,7 @@ import '../widgets/hero_section.dart';
 import '../widgets/nav_bar.dart';
 import '../widgets/projects_section.dart';
 import '../widgets/resume_section.dart';
+import '../widgets/side_nav_bar.dart';
 import '../widgets/skills_section.dart';
 
 /// The single scrolling page every section lives on. GoRouter always
@@ -147,52 +149,72 @@ class _HomeScreenState extends State<HomeScreen> {
             _didInitialScroll = true;
           }
 
+          final isDesktop = Breakpoints.isDesktop(context);
+
+          final content = SingleChildScrollView(
+            controller: _scrollController,
+            child: Column(
+              children: [
+                // On desktop the sidebar handles navigation, so content
+                // starts at the top; on mobile/tablet a top bar overlays
+                // the content, so this reserves space for it.
+                if (!isDesktop) SizedBox(height: NavBar.height),
+                HeroSection(
+                  sectionKey: _sectionKeys[Section.about]!,
+                  profile: data.profile,
+                  onViewResume: () => _onNavTap(Section.resume),
+                  onContact: () => _onNavTap(Section.contact),
+                ),
+                SkillsSection(
+                  sectionKey: _sectionKeys[Section.skills]!,
+                  skillGroups: data.skillGroups,
+                ),
+                ExperienceSection(
+                  sectionKey: _sectionKeys[Section.experience]!,
+                  experience: data.experience,
+                ),
+                ProjectsSection(
+                  sectionKey: _sectionKeys[Section.projects]!,
+                  projects: data.projects,
+                ),
+                ExpertiseSection(
+                  sectionKey: _sectionKeys[Section.expertise]!,
+                  highlights: data.expertiseHighlights,
+                ),
+                AchievementsSection(
+                  sectionKey: _sectionKeys[Section.achievements]!,
+                  achievements: data.achievements,
+                  education: data.education,
+                ),
+                ResumeSection(
+                  sectionKey: _sectionKeys[Section.resume]!,
+                  profile: data.profile,
+                ),
+                ContactSection(
+                  sectionKey: _sectionKeys[Section.contact]!,
+                  profile: data.profile,
+                ),
+                Footer(profile: data.profile),
+              ],
+            ),
+          );
+
+          if (isDesktop) {
+            // A permanent left navigation rail beside the scrolling
+            // content — the desktop-website layout, distinct from the
+            // top-bar-over-content pattern mobile/tablet use.
+            return Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                SideNavBar(profile: data.profile, onSectionTap: _onNavTap),
+                Expanded(child: content),
+              ],
+            );
+          }
+
           return Stack(
             children: [
-              SingleChildScrollView(
-                controller: _scrollController,
-                child: Column(
-                  children: [
-                    SizedBox(height: NavBar.height),
-                    HeroSection(
-                      sectionKey: _sectionKeys[Section.about]!,
-                      profile: data.profile,
-                      onViewResume: () => _onNavTap(Section.resume),
-                      onContact: () => _onNavTap(Section.contact),
-                    ),
-                    SkillsSection(
-                      sectionKey: _sectionKeys[Section.skills]!,
-                      skillGroups: data.skillGroups,
-                    ),
-                    ExperienceSection(
-                      sectionKey: _sectionKeys[Section.experience]!,
-                      experience: data.experience,
-                    ),
-                    ProjectsSection(
-                      sectionKey: _sectionKeys[Section.projects]!,
-                      projects: data.projects,
-                    ),
-                    ExpertiseSection(
-                      sectionKey: _sectionKeys[Section.expertise]!,
-                      highlights: data.expertiseHighlights,
-                    ),
-                    AchievementsSection(
-                      sectionKey: _sectionKeys[Section.achievements]!,
-                      achievements: data.achievements,
-                      education: data.education,
-                    ),
-                    ResumeSection(
-                      sectionKey: _sectionKeys[Section.resume]!,
-                      profile: data.profile,
-                    ),
-                    ContactSection(
-                      sectionKey: _sectionKeys[Section.contact]!,
-                      profile: data.profile,
-                    ),
-                    Footer(profile: data.profile),
-                  ],
-                ),
-              ),
+              content,
               Positioned(
                 top: 0,
                 left: 0,

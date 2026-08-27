@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../core/constants/breakpoints.dart';
+import '../../../core/widgets/hover_lift.dart';
 import '../../../core/widgets/section_title.dart';
 import '../../../core/widgets/section_wrapper.dart';
 import '../../../data/models/achievement_item.dart';
@@ -57,38 +58,40 @@ class AchievementsSection extends StatelessWidget {
                   for (var index = 0; index < achievements.length; index++)
                     SizedBox(
                       width: cardWidth,
-                      child: Container(
-                        padding: const EdgeInsets.all(18),
-                        decoration: BoxDecoration(
-                          color: theme.colorScheme.surface,
-                          borderRadius: BorderRadius.circular(14),
-                          border: Border.all(color: theme.dividerColor),
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(_categoryIcon(achievements[index].category), color: theme.colorScheme.primary),
-                            const SizedBox(width: 14),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(
-                                    achievements[index].title,
-                                    style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700),
-                                  ),
-                                  const SizedBox(height: 4),
-                                  Text(
-                                    achievements[index].description,
-                                    style: theme.textTheme.bodySmall?.copyWith(
-                                      color: theme.colorScheme.onSurface.withValues(alpha: 0.75),
+                      child: HoverLift(
+                        child: Container(
+                          padding: const EdgeInsets.all(18),
+                          decoration: BoxDecoration(
+                            color: theme.colorScheme.surface,
+                            borderRadius: BorderRadius.circular(14),
+                            border: Border.all(color: theme.dividerColor),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Icon(_categoryIcon(achievements[index].category), color: theme.colorScheme.primary),
+                              const SizedBox(width: 14),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      achievements[index].title,
+                                      style: theme.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700),
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      achievements[index].description,
+                                      style: theme.textTheme.bodySmall?.copyWith(
+                                        color: theme.colorScheme.onSurface.withValues(alpha: 0.75),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ).animate(delay: (index * 60).ms).fadeIn(duration: 350.ms),
                     ),
