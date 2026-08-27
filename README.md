@@ -1,16 +1,32 @@
-# omkar_mhatre
+# Omkar Mhatre — Portfolio
 
-A new Flutter project.
+A Flutter Web portfolio for Omkar Mhatre, Senior Flutter Developer. Deployed automatically to GitHub Pages on every push to `main`.
 
-## Getting Started
+## Editing content
 
-This project is a starting point for a Flutter application.
+All real-world content — bio, contact details, skills, experience, projects, achievements, education — lives in one file:
 
-A few resources to get you started if this is your first Flutter project:
+```
+assets/content/portfolio_data.json
+```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Edit that file and nothing else to update the site. No Dart code needs to change; every section widget reads from this JSON at runtime through `lib/data/portfolio_repository.dart`. To swap the résumé PDF, replace `assets/resume/Omkar_Mhatre_Resume.pdf` (keep the same filename, or update `profile.resumeAssetPath` / `profile.resumeFileName` in the JSON to match).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Running locally
+
+```
+flutter pub get
+flutter run -d chrome
+```
+
+## Building for production
+
+```
+flutter build web --release --base-href /omkar_mhatre/
+```
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which runs `flutter analyze` and `flutter test`, builds the release web bundle, and publishes it to GitHub Pages via the official Pages Actions.
+
+**One-time setup**: in the repo's Settings → Pages, set **Source** to **GitHub Actions**. After that, every push to `main` deploys automatically to `https://<your-username>.github.io/omkar_mhatre/`.

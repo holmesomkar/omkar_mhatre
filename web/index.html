@@ -18,19 +18,71 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Omkar Mhatre — Senior Flutter Developer with 5+ years of Flutter, 7+ years of Android and React Native experience. Skilled in Dart, BLoC, GoRouter, Firebase, REST APIs, Git, CI/CD and Azure.">
+  <meta name="theme-color" content="#0B0F19">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Omkar Mhatre — Senior Flutter Developer">
+  <meta property="og:description" content="Portfolio of Omkar Mhatre, Senior Flutter Developer specializing in Flutter, Dart, Android, React Native, BLoC, GoRouter and Firebase.">
+  <meta property="og:url" content="https://omkarholmes.github.io/omkar_mhatre/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Omkar Mhatre — Senior Flutter Developer">
+  <meta name="twitter:description" content="Portfolio of Omkar Mhatre, Senior Flutter Developer specializing in Flutter, Dart, Android, React Native, BLoC, GoRouter and Firebase.">
+
+  <link rel="canonical" href="https://omkarholmes.github.io/omkar_mhatre/">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="omkar_mhatre">
+  <meta name="apple-mobile-web-app-title" content="Omkar Mhatre">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>omkar_mhatre</title>
+  <title>Omkar Mhatre — Senior Flutter Developer</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Omkar Mhatre",
+    "jobTitle": "Senior Flutter Developer",
+    "url": "https://omkarholmes.github.io/omkar_mhatre/",
+    "email": "mailto:karomhatre@gmail.com",
+    "sameAs": [
+      "https://github.com/omkarholmes",
+      "https://linkedin.com/in/omkar-mhatre-614a89145"
+    ],
+    "knowsAbout": ["Flutter", "Dart", "Android", "React Native", "BLoC", "GoRouter", "Firebase", "REST APIs", "CI/CD", "Azure DevOps"]
+  }
+  </script>
+
+  <!--
+    GitHub Pages serves this app as static files, so a direct hit or
+    refresh on a deep link like /omkar_mhatre/experience would 404 (there's
+    no server-side router). web/404.html redirects those requests back here
+    with the intended path encoded in the query string; this decodes it
+    back into a real URL before Flutter (and GoRouter) boots, so deep links
+    and refreshes on any section keep working.
+    See: https://github.com/rafgraph/spa-github-pages
+  -->
+  <script>
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+      }
+    }(window.location));
+  </script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>

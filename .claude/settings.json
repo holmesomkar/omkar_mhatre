@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter pub *)",
+      "Bash(mkdir -p \"/Users/omkarmhatre/My Projects/porfolio/omkar_mhatre/assets/resume\" \"/Users/omkarmhatre/My Projects/porfolio/omkar_mhatre/assets/content\" \"/Users/omkarmhatre/My Projects/porfolio/omkar_mhatre/assets/images\" && cp \"/Users/omkarmhatre/Downloads/Omkar_Mhatre_Flutter_ Developer.pdf\" \"/Users/omkarmhatre/My Projects/porfolio/omkar_mhatre/assets/resume/Omkar_Mhatre_Resume.pdf\" && ls -la \"/Users/omkarmhatre/My Projects/porfolio/omkar_mhatre/assets/resume/\")",
+      "Bash(find ~/.pub-cache -iname \"*.dart\" -path \"*font_awesome_flutter*\" | xargs grep -l \"class FaIconData\\\\|typedef FaIconData\\\\|abstract class FaIconData\" 2>/dev/null | head -5)",
+      "Read(//Users/omkarmhatre/.pub-cache/**)",
+      "Read(//Users/omkarmhatre/.pub-cache/hosted/pub.dev/font_awesome_flutter-11.0.0/lib/src/**)",
+      "Bash(flutter build *)",
+      "Bash(echo \"EXIT: $?\")"
+    ],
+    "additionalDirectories": [
+      "/Users/omkarmhatre/Downloads"
+    ]
+  }
+}

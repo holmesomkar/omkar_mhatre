@@ -1,11 +1,11 @@
 {
-    "name": "omkar_mhatre",
-    "short_name": "omkar_mhatre",
+    "name": "Omkar Mhatre — Senior Flutter Developer",
+    "short_name": "Omkar Mhatre",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#0B0F19",
+    "theme_color": "#0B0F19",
+    "description": "Portfolio of Omkar Mhatre, Senior Flutter Developer with 5+ years of Flutter and 7+ years of mobile development experience.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

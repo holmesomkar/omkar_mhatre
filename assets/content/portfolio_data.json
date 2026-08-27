@@ -1,0 +1,228 @@
+{
+  "profile": {
+    "name": "Omkar Mhatre",
+    "title": "Senior Flutter Developer",
+    "tagline": "Building scalable, high-performance cross-platform apps with Flutter, Dart & modern architecture.",
+    "location": "Navi Mumbai, India",
+    "email": "karomhatre@gmail.com",
+    "phone": "+91 99693 83542",
+    "github": "https://github.com/omkarholmes",
+    "linkedin": "https://linkedin.com/in/omkar-mhatre-614a89145",
+    "bio": "Passionate Flutter Developer with 5 years of experience in cross-platform app development and a total of 7 years in Android development, specializing in building scalable, high-quality mobile products. Experienced in translating complex product requirements into seamless, performant, and maintainable applications using Flutter, Dart, and modern architecture patterns. Strong focus on user experience, clean code, and continuous improvement — driven by a product mindset and a deep understanding of app lifecycle, performance, and deployment.",
+    "yearsFlutterExperience": "5+",
+    "yearsAndroidExperience": "7+",
+    "resumeAssetPath": "assets/resume/Omkar_Mhatre_Resume.pdf",
+    "resumeFileName": "Omkar_Mhatre_Resume.pdf"
+  },
+  "skillGroups": [
+    {
+      "title": "Mobile Development",
+      "skills": ["Flutter", "Dart", "Android Native (Java/Kotlin)", "React Native"]
+    },
+    {
+      "title": "Architecture & State Management",
+      "skills": ["BLoC", "Provider", "GetX", "Clean Architecture", "GoRouter"]
+    },
+    {
+      "title": "Backend & APIs",
+      "skills": ["REST APIs", "Firebase", ".NET API Integration", "Method Channels"]
+    },
+    {
+      "title": "Tools & DevOps",
+      "skills": ["Git / GitHub", "Azure DevOps", "CI/CD", "Figma", "JIRA", "Postman", "Insomnia"]
+    }
+  ],
+  "expertiseHighlights": [
+    {
+      "title": "Flutter & Dart",
+      "description": "5+ years building production Flutter apps end-to-end — from architecture to app-store release.",
+      "icon": "flutter"
+    },
+    {
+      "title": "Android Native",
+      "description": "7+ years total Android experience, including native Java/Kotlin development and platform channels.",
+      "icon": "android"
+    },
+    {
+      "title": "React Native",
+      "description": "Cross-platform delivery with custom native modules and shared React/.NET web integration.",
+      "icon": "react"
+    },
+    {
+      "title": "REST APIs",
+      "description": "Designed and consumed REST APIs across .NET and Firebase backends, with robust error handling.",
+      "icon": "api"
+    },
+    {
+      "title": "BLoC",
+      "description": "Primary architecture pattern for scalable, testable state management in recent production apps.",
+      "icon": "bloc"
+    },
+    {
+      "title": "GoRouter",
+      "description": "Declarative, URL-based navigation — including this portfolio's own routing.",
+      "icon": "router"
+    },
+    {
+      "title": "Firebase",
+      "description": "Firestore, Auth and backend services powering full admin + consumer app suites.",
+      "icon": "firebase"
+    },
+    {
+      "title": "Git & CI/CD",
+      "description": "Git/GitHub workflows with Azure DevOps pipelines for automated build and release.",
+      "icon": "git"
+    },
+    {
+      "title": "Azure DevOps",
+      "description": "Pipeline authoring and release management for team delivery.",
+      "icon": "azure"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Wai Technologies Pvt Ltd",
+      "role": "Senior Flutter Developer",
+      "period": "Dec 2025 – Present",
+      "location": "Pune, India",
+      "bullets": [
+        "Led a team of developers and testers in building and maintaining a logistics application for a USA-based client.",
+        "Designed and maintained the application using the BLoC architecture, integrating seamlessly with .NET backend APIs.",
+        "Reviewed, refactored, and optimized team code using AI-assisted development tools while ensuring clean, scalable, and maintainable code.",
+        "Conducted code reviews, mentored developers, and coordinated task execution to ensure timely delivery in an Agile environment.",
+        "Collaborated with cross-functional teams to deliver high-performance mobile solutions, troubleshoot complex issues, and improve overall application quality."
+      ]
+    },
+    {
+      "company": "Innovizia Technologies Pvt Ltd",
+      "role": "Senior Flutter Developer",
+      "period": "Dec 2022 – Aug 2025 (2 yrs 9 mos)",
+      "location": "Remote, WFH",
+      "bullets": [
+        "Developed a KIOSK-based attendance management application in Flutter, collaborating with the machine learning team to integrate automated attendance marking and a conference food and beverages ordering system.",
+        "Developed a complete admin and consumer application in Flutter powered by Firebase to support and manage a customer-facing Flutter app.",
+        "Managed client requirements end-to-end — analyzing needs, planning features, delegating backend tasks, and developing frontend UI to deliver precise, expected outcomes.",
+        "Translated Figma UI designs into fully functional Flutter interfaces, enhancing user experience with thoughtful animations and polished UI behavior that remained true to the original design intent.",
+        "Guided team members in designing system architectures and backend interfaces tailored to meet frontend requirements efficiently and scalably."
+      ]
+    },
+    {
+      "company": "Evista Solutions",
+      "role": "Flutter Developer",
+      "period": "Nov 2021 – Nov 2022 (1 yr)",
+      "location": "Remote, WFH",
+      "bullets": [
+        "Hands-on experience with GetX and Provider state management in Flutter, implementing efficient and reactive UI updates to enhance app performance and maintainability.",
+        "Optimized network call handling and error management to improve app responsiveness and ensure robust, seamless user experiences.",
+        "Built reusable Flutter widgets and implemented design patterns where necessary to promote code modularity, scalability, and maintainability.",
+        "Developed method channels for native code integration to address specific performance optimization challenges in Flutter apps.",
+        "Integrated payment gateways and implemented push notification services to enhance app functionality and user engagement.",
+        "Maintained and contributed to 15–20 Flutter project codebases, ensuring high code quality, bug fixes, and feature enhancements across multiple apps.",
+        "Familiarized with the deployment processes for Android and iOS apps, including publishing to Google Play Store and Apple App Store."
+      ]
+    },
+    {
+      "company": "Sri Technocrat",
+      "role": "React Native Developer",
+      "period": "Oct 2020 – Nov 2021 (1 yr 1 mo)",
+      "location": "Remote, WFH",
+      "bullets": [
+        "Gained hands-on experience in cross-platform mobile app development using the React Native framework, delivering consistent functionality across Android and iOS.",
+        "Developed custom React Native modules and integrated them with native components to extend app capabilities and performance.",
+        "Implemented dynamic Dark and Light theme switching in the app to enhance user accessibility and personalization.",
+        "Maintained and improved legacy ASP.NET applications.",
+        "Built and integrated a React web app into a .NET application.",
+        "Optimized SQL Server queries for performance and reliability."
+      ]
+    },
+    {
+      "company": "Bitwise Inc.",
+      "role": "Android Developer",
+      "period": "Jul 2018 – Oct 2019 (1 yr 3 mos)",
+      "location": "Pune, India",
+      "bullets": [
+        "Acquired hands-on experience working within Agile development processes, participating in daily stand-ups, sprint planning, and iterative delivery cycles to ensure timely project execution.",
+        "Communicated directly with clients through scheduled calls, using clear and empathetic communication to gather feedback, clarify requirements, and build trust.",
+        "Demonstrated newly implemented application features to clients, providing walkthroughs, addressing feedback, and ensuring alignment with client expectations.",
+        "Designed and developed user interfaces in native Android, focusing on usability, consistency, and performance across various device sizes.",
+        "Integrated RESTful APIs into Android applications, enabling dynamic data exchange, seamless backend communication, and real-time content updates."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Logistics Management Platform",
+      "company": "Wai Technologies",
+      "description": "Led development of a logistics application for a USA-based client, built on BLoC architecture and integrated with .NET backend APIs.",
+      "tags": ["Flutter", "BLoC", "REST APIs", ".NET", "Team Lead"]
+    },
+    {
+      "title": "KIOSK Attendance & F&B Ordering System",
+      "company": "Innovizia Technologies",
+      "description": "KIOSK-based attendance management app with machine-learning-powered automated attendance marking, plus a conference food and beverages ordering flow.",
+      "tags": ["Flutter", "ML Integration", "Kiosk UX"]
+    },
+    {
+      "title": "Admin & Consumer App Suite",
+      "company": "Innovizia Technologies",
+      "description": "Complete admin and consumer application pair powered by Firebase, supporting and managing a customer-facing Flutter app end-to-end.",
+      "tags": ["Flutter", "Firebase", "Figma to Flutter"]
+    },
+    {
+      "title": "Multi-App Client Portfolio",
+      "company": "Evista Solutions",
+      "description": "Maintained and contributed to 15–20 Flutter codebases, integrating payment gateways and push notifications with GetX/Provider state management.",
+      "tags": ["Flutter", "GetX", "Provider", "Payments", "Push Notifications"]
+    },
+    {
+      "title": "Cross-Platform Retail App",
+      "company": "Sri Technocrat",
+      "description": "React Native app with custom native modules and dynamic dark/light theme switching, delivering consistent functionality across Android and iOS.",
+      "tags": ["React Native", "Native Modules", "Theming"]
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Academic Excellence Award",
+      "description": "Recognised for consistent academic excellence throughout the Bachelor of Engineering program.",
+      "category": "Academic"
+    },
+    {
+      "title": "Best Final Year Project",
+      "description": "Awarded best final year project in the department; led a team to win the Intra-Departmental final year project competition.",
+      "category": "Academic"
+    },
+    {
+      "title": "Data Science Certification",
+      "description": "Python data analysis, Pandas, Matplotlib/Seaborn, NumPy, and web scraping (Oct 2019 – Mar 2020).",
+      "category": "Certification"
+    },
+    {
+      "title": "Machine Learning Certification",
+      "description": "SPRK Technologies, Kharghar (Jul 2017 – Apr 2018).",
+      "category": "Certification"
+    },
+    {
+      "title": "Java Certification",
+      "description": "SPRK Technologies, Kharghar (Feb 2017 – Mar 2018).",
+      "category": "Certification"
+    },
+    {
+      "title": "Team Leadership",
+      "description": "Led a development and testing team delivering a production logistics app for a USA-based client at Wai Technologies.",
+      "category": "Professional"
+    },
+    {
+      "title": "15–20 Codebases Maintained",
+      "description": "Owned quality, bug fixes and feature delivery across 15–20 concurrent Flutter client codebases at Evista Solutions.",
+      "category": "Professional"
+    }
+  ],
+  "education": {
+    "institution": "Pillai HOC College of Engineering and Technology, Mumbai University",
+    "degree": "Bachelor of Engineering (B.E.)",
+    "period": "2014 – 2018",
+    "location": "Navi Mumbai, India",
+    "detail": "CGPA 8.5 / 10"
+  }
+}
