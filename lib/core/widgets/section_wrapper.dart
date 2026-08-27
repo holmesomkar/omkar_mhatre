@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../app/theme/app_colors.dart';
 import '../constants/breakpoints.dart';
 
 /// Common chrome every section shares: centered max-width content, a
@@ -21,10 +22,13 @@ class SectionWrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = Breakpoints.isMobile(context);
     final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
     return Container(
       key: sectionKey,
       width: double.infinity,
-      color: tinted ? theme.colorScheme.surface : Colors.transparent,
+      // A distinct tone from card surfaces, so cards don't blend into a
+      // tinted section's background.
+      color: tinted ? (isDark ? AppColors.darkSurfaceAlt : AppColors.lightSurfaceAlt) : Colors.transparent,
       padding: EdgeInsets.symmetric(
         horizontal: isMobile ? 20 : 32,
         vertical: isMobile ? 56 : 88,
